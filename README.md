@@ -1,3 +1,4 @@
+Copy of [Geir Arne Hjelle's](https://github.com/gahjelle/) [Advent of Code template](https://github.com/gahjelle/template-aoc-python), modified for my workflow 
 # Advent of Code Python Template for Copier
 
 This template creates scaffolding for one day of [Advent of Code](https://adventofcode.com/). It includes tests and can download your personal input data if you have [`advent-of-code-data`](https://pypi.org/project/advent-of-code-data/) installed.
@@ -58,7 +59,7 @@ See https://github.com/gahjelle/advent_of_code/tree/main/python for examples usi
 
 
 ## Credits
-
+All based on [Geir Arne Hjelle's](https://github.com/gahjelle/) [Advent of Code template](https://github.com/gahjelle/template-aoc-python), modified for my workflow 
 Thanks to [Matt Gregory](https://github.com/grovduck) for helping to [debug](https://github.com/gahjelle/template-aoc-python/issues/1) this recipe for Windows and creating the Powershell script to create a full year of templates.
 
 And a huge thanks to [Eric Wastl](https://twitter.com/ericwastl/) for creating the wonderful [Advent of Code](https://adventofcode.com/).
