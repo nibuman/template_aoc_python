@@ -1,25 +1,20 @@
 """Tests for AoC {{day}}, {{year}}{% if puzzle_name %}: {{puzzle_name}}{% endif %}."""
 
-# Standard library imports
-import pathlib
-
 # Third party imports
 import aoc{{year}}{{'%02d'|format(day)}}
 import pytest
 
-PUZZLE_DIR = pathlib.Path(__file__).parent
-
 
 @pytest.fixture
 def example1():
-    puzzle_input = (PUZZLE_DIR / "example1.txt").read_text().rstrip()
-    return aoc{{year}}{{'%02d'|format(day)}}.parse_data(puzzle_input)
+    puzzle_input = aoc{{year}}{{'%02d'|format(day)}}.read_file("example1.txt")
+    return aoc{{year}}{{'%02d'|format(day)}}.parse(puzzle_input)
 
 
 @pytest.fixture
 def example2():
-    puzzle_input = (PUZZLE_DIR / "example2.txt").read_text().rstrip()
-    return aoc{{year}}{{'%02d'|format(day)}}.parse_data(puzzle_input)
+    puzzle_input = aoc{{year}}{{'%02d'|format(day)}}.read_file("example2.txt")
+    return aoc{{year}}{{'%02d'|format(day)}}.parse(puzzle_input)
 
 
 @pytest.mark.skip(reason="Not implemented")
