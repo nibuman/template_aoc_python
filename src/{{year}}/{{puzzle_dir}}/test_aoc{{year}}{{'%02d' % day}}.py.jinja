@@ -16,6 +16,11 @@ def example2():
     puzzle_input = aoc{{year}}{{'%02d'|format(day)}}.read_file("example2.txt")
     return aoc{{year}}{{'%02d'|format(day)}}.parse(puzzle_input)
 
+@pytest.fixture
+def real_data():
+    puzzle_input = aoc{{year}}{{'%02d'|format(day)}}.read_file("input.txt")
+    return aoc{{year}}{{'%02d'|format(day)}}.parse(puzzle_input)
+
 
 @pytest.mark.skip(reason="Not implemented")
 def test_parse_example1(example1):
@@ -39,3 +44,14 @@ def test_part2_example1(example1):
 def test_part2_example2(example2):
     """Test part 2 on example input."""
     assert aoc{{year}}{{'%02d'|format(day)}}.part2(example2) == ...
+
+@pytest.mark.skip(reason="Not implemented")
+def test_part1_real(real_data):
+    """Test part 1 on real input."""
+    assert aoc{{year}}{{'%02d'|format(day)}}.part1(real_data) == ...
+
+
+@pytest.mark.skip(reason="Not implemented")
+def test_part2_real(real_data):
+    """Test part 2 on real input."""
+    assert aoc{{year}}{{'%02d'|format(day)}}.part2(real_data) == ...
