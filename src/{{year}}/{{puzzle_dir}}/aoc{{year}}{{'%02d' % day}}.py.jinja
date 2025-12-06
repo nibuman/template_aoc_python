@@ -5,8 +5,10 @@ import pathlib
 import sys
 
 
-def parse(puzzle_input):
+def parse(puzzle_input: str) -> list[str]:
     """Parse input."""
+    data = puzzle_input.split("\n")
+    return data
 
 
 def part1(data):
@@ -23,9 +25,9 @@ def solve(puzzle_input):
     yield "Part 1", part1(data)
     yield "Part 2", part2(data)
 
-def read_file(file_name):
+def read_file(file_name) -> str:
     PUZZLE_DIR = pathlib.Path(__file__).parent
-    return pathlib.Path(PUZZLE_DIR / file_name).read_text().rstrip().split("\n")
+    return pathlib.Path(PUZZLE_DIR / file_name).read_text().rstrip()
 
 if __name__ == "__main__":
     DEFAULT_INPUT_FILES = ["example1.txt", "input.txt"]
