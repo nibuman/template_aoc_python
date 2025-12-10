@@ -38,4 +38,9 @@ if __name__ == "__main__":
     for file_name in puzzle_input_files:
         print(f"\n{file_name}:")
         solutions = solve(puzzle_input=read_file(file_name))
-        print("\n".join(f"{puzzle}: {solution}" for puzzle, solution in solutions))
+        print(
+            "\n".join(
+                f"{puzzle}: {solution} (in {time / 1000} ms)"
+                for puzzle, solution, time in solutions
+            )
+        )
