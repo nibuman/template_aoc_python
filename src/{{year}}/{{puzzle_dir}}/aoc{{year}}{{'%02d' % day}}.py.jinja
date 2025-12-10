@@ -3,7 +3,7 @@
 # Standard library imports
 import pathlib
 import sys
-
+from datetime import datetime
 
 def parse(puzzle_input: str) -> list[str]:
     """Parse input."""
@@ -22,8 +22,11 @@ def part2(data):
 def solve(puzzle_input):
     """Solve the puzzle for the given input."""
     data = parse(puzzle_input)
-    yield "Part 1", part1(data)
-    yield "Part 2", part2(data)
+    for name, func in (("Part1", part1), ("Part2", part2)):
+        t1 = datetime.now()
+        result = func(data)
+        t2 = datetime.now()
+        yield name, result, (t2 - t1).microseconds
 
 def read_file(file_name) -> str:
     PUZZLE_DIR = pathlib.Path(__file__).parent
